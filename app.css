@@ -124,6 +124,14 @@ header {
     left: 0;
   }
 } */
+.home {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+}
 .home #particles-js {
   position: absolute;
   top: 0;
@@ -139,20 +147,22 @@ header {
   height: 100%;
   width: 100%;
 }
-.text-box {
+.home .text-box {
   font-family: "Jost", sans-serif;
   margin-top: 250px;
-
+  flex: 1 1 40rem;
+  padding-top: 1rem;
+  z-index: 1;
   margin-left: 200px;
   letter-spacing: 1px;
   line-height: 26px;
   color: aliceblue;
 }
-.text-box h1 {
+.home .text-box .boss {
   font-size: 70px;
   line-height: 160px;
 }
-.text-box a {
+.home .text-box a {
   font-size: 16px;
   margin-top: 30px;
   display: inline-block;
@@ -162,10 +172,10 @@ header {
   padding: 10px 30px;
   text-decoration-line: none;
 }
-.text-box p {
+.home .text-box p {
   font-size: 20px;
 }
-.text-box .btn {
+.home .text-box .btn {
   background: #ff6000;
   color: #000000;
   margin-left: 30px;
@@ -179,7 +189,7 @@ header {
   bottom: 0;
 }
 /* animation text */
-.auto-input {
+.home .auto-input {
   color: #ff6000;
 }
 /* About section */
@@ -206,7 +216,13 @@ header {
   padding: 4rem;
   color: #d5d6d7;
 }
-
+.about .main .image {
+  text-align: center;
+  flex: 1 1 35rem;
+  margin: 4rem;
+  width: 30rem;
+  height: auto;
+}
 .about .main .me {
   color: #ff6000;
 }
@@ -216,11 +232,6 @@ header {
   gap: 1.5rem;
   font-family: "Nunito";
   /* font-weight: 600; */
-}
-
-.about .main .img {
-  margin-left: 200px;
-  width: 30rem;
 }
 
 /* skills */
@@ -262,31 +273,39 @@ header {
 }
 .skills .container .bar:hover {
   box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: #282626!important;
+  background-color: #282626 !important;
 }
 /* Education */
-.education{
+.education {
   background: #454545;
   min-height: 80vh;
 }
-.education .heading{
+.education .heading {
   color: #ffffff;
+  font-size: 30px;
   margin-left: 50%;
 }
-.education .quote{
+.education .heading .fa-graduation-cap {
+  color: #000000;
+}
+.education .heading .sar {
+  color: #ffa559;
+}
+
+.education .quote {
   color: #f8f8f8;
-  /* font-size: 1.5rem; */
+  font-size: 1.5rem;
   text-align: center;
   font-weight: 600;
   margin-top: 0.5rem;
 }
-.education .box-container{
+.education .box-container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
 }
-.education .box-container .box{
+.education .box-container .box {
   display: flex;
   flex-direction: row;
   width: 80%;
@@ -298,6 +317,19 @@ header {
   overflow: hidden;
   transition: 0.3s;
   background: rgb(252, 252, 252);
+}
+.education .box-container .box {
+  width: 70%;
+  height: 250px;
+}
+.education .box-container .box .content .x {
+  font-size: 30px;
+}
+.education .box-container .box .content .name {
+  font-size: 25px;
+}
+.education .box-container .box .content .year {
+  font-size: 20px;
 }
 .education .box-container .box:hover {
   transform: scale(1.03);
@@ -365,17 +397,26 @@ header {
     padding: 10px 20px;
     transition: 0.4s;
   }
-  .skills .container{
+  .skills .container {
     width: 80%;
     margin: auto;
   }
-  .skills .container .row{
+  .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
     width: 18rem;
+  }
+  .about .main .img {
+    /* margin-left: 0%;
+    align-items: center;
+    margin-right: 25%; */
+    margin-right: 30%;
   }
 }
 
 @media (max-width: 750px) {
+  .about .main .img {
+    margin-left: 0%;
+  }
   .navmenu {
     position: absolute;
     top: 100%;
@@ -427,5 +468,90 @@ header {
     position: absolute;
     right: 0%;
     bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  /* home */
+  .home .text-box {
+    margin-left: 10%;
+  }
+  .home .text-box .next {
+    font-size: 20px;
+    margin-top: 0%;
+  }
+  .home .text-box .boss {
+    font-size: 35px;
+  }
+  .home .text-box a {
+    padding: 5px 20px;
+    font-size: 15px;
+  }
+  .home .text-box .btn {
+    padding: 5px 20px;
+  }
+  /* about */
+  .about .main .head {
+    font-size: 30px;
+    display: flex;
+    margin-left: 50px;
+  }
+  .about .main .head .fas {
+    margin-right: 10px;
+  }
+  .about .main .head .me {
+    margin-left: 10px;
+  }
+  .about .main .img .image{
+    margin-top: 2rem;
+    margin: 0 auto;
+    margin-left: 10%;
+    height: 100%;
+    width: 220px;
+  }
+  .skills {
+    margin-left: 10%;
+    align-items: center;
+  }
+  .skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 10rem;
+  }
+  .skills .heading {
+    font-size: 40px;
+    margin-left: 20%;
+  }
+  .education {
+    margin-left: 5%;
+    border-radius: 1rem;
+    width: 90%;
+  }
+  .education .heading {
+    font-size: 25px;
+    margin-left: 90px;
+  }
+  .education .box-container .box {
+    width: 80%;
+    height: 220px;
+  }
+  .education .box-container .box .content {
+    width: 40px;
+  }
+  .education .quote {
+    font-size: 20px;
+  }
+  .education .box-container .box .content .x {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+  .education .box-container .box .content .name {
+    font-size: 14px;
+    margin-top: 0px;
+  }
+  .education .box-container .box .content .year {
+    font-size: 12px;
+    margin-top: 15px;
   }
 }
