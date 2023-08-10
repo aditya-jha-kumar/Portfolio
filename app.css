@@ -375,20 +375,20 @@ header {
   font-weight: 700;
 }
 /* Contact */
-.contact{
+.contact {
   background: linear-gradient(to bottom, #ff6000, #ffa559);
   min-height: 60vh;
 }
-.contact .heading{
+.contact .heading {
   margin-left: 40%;
   margin-top: 60px;
   font-size: 40px;
 }
 .contact .heading .fas,
-.contact .heading .last{
+.contact .heading .last {
   margin-top: 20px;
 }
-.contact .container{
+.contact .container {
   max-width: 1050px;
   width: 100%;
   background: #454545;
@@ -413,23 +413,23 @@ header {
   height: 20rem;
   position: relative;
 }
-.contact .content .form{
+.contact .content .form {
   width: 45%;
   margin-right: 3.5rem;
 }
-form .area{
+form .area {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.area .field{
+.area .field {
   height: 50px;
   display: flex;
   position: relative;
   margin: 1rem;
   width: 100%;
 }
-form i{
+form i {
   position: absolute;
   top: 50%;
   left: 18px;
@@ -498,12 +498,12 @@ form .message textarea::-webkit-scrollbar {
   flex: 1 1 25rem;
   margin: 2.5rem;
 }
-.footer .box-container .box .me{
+.footer .box-container .box .me {
   color: #ff6000;
 }
 
 .footer .box-container .box h3 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   color: #fff;
   padding-bottom: 1rem;
   font-weight: normal;
@@ -734,6 +734,7 @@ form .message textarea::-webkit-scrollbar {
     flex-wrap: wrap;
     gap: 1rem;
     width: 10rem;
+    margin-left: -10%;
   }
   .skills .heading {
     font-size: 40px;
@@ -806,7 +807,7 @@ form .message textarea::-webkit-scrollbar {
     margin-left: 5%;
     border-radius: 1rem;
   }
-  .contact .heading{
+  .contact .heading {
     margin-left: 20%;
     margin-top: 60px;
     font-size: 30px;
@@ -821,7 +822,7 @@ form .message textarea::-webkit-scrollbar {
   .contact .content .image-box {
     display: none;
   }
-  form .field input{
+  form .field input {
     width: 90%;
   }
   .contact .content form {
